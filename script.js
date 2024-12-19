@@ -1,48 +1,32 @@
-/* Reset some basic styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+// Example function to fetch movies (mock data for now)
+function fetchMovies() {
+    const searchQuery = document.getElementById('search').value;
+    
+    // Mock API response (replace this with a real API later)
+    const mockMovies = [
+        { title: "Movie 1", revenue: "$100M" },
+        { title: "Movie 2", revenue: "$200M" },
+    ];
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    color: #333;
-    text-align: center;
-    padding: 20px;
-}
+    // Filter and display movies
+    const results = document.getElementById("movie-results");
+    results.innerHTML = ""; // Clear previous results
 
-header {
-    background: #222;
-    color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-}
+    const filteredMovies = mockMovies.filter(movie =>
+        movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
 
-h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-input, button {
-    padding: 10px 15px;
-    font-size: 16px;
-    margin: 5px;
-}
-
-button {
-    background: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-#movie-results {
-    margin-top: 20px;
+    if (filteredMovies.length === 0) {
+        results.innerHTML = `<p>No movies found</p>`;
+    } else {
+        filteredMovies.forEach(movie => {
+            results.innerHTML += `
+                <div>
+                    <h2>${movie.title}</h2>
+                    <p>Revenue: ${movie.revenue}</p>
+                </div>
+            `;
+        });
+    }
 }
 
