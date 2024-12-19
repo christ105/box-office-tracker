@@ -9,14 +9,13 @@
 <body>
     <header>
         <h1>🎥 Box Office Tracker</h1>
-        <p>Stay updated with the latest movie box office numbers!</p>
-    </header>
-
-    <main>
         <input type="text" id="search" placeholder="Search for a movie...">
         <button onclick="fetchMovies()">Search</button>
+    </header>
 
+    <main id="main-content">
         <section id="movie-results"></section>
+        <section id="movie-details" style="display:none;"></section>
     </main>
 
     <footer>
