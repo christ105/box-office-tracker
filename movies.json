@@ -1,1 +1,17 @@
 
+    {
+        "id": "1",
+        "title": "Inception",
+        "release_date": "2010-07-16",
+        "overview": "A skilled thief is given a chance at redemption if he can successfully perform inception.",
+        "poster": "https://image.tmdb.org/t/p/w200/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg"
+    },
+    {
+        "id": "2",
+        "title": "The Dark Knight",
+        "release_date": "2008-07-18",
+        "overview": "Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+        "poster": "https://image.tmdb.org/t/p/w200/1hRoyzDtpgMU7Dz4JF22RANzQO7.jpg"
+    }
+]
+
